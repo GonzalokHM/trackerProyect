@@ -3,7 +3,9 @@ import { AddExercise } from '../../context/RoutineContext';
 import { Exercise, Routine } from '../../types/routine';
 import ExerciseForm from '../ExerciseForm';
 import Modal from "../Modal";
+import { SeriesButton } from '../SeriesButton';
 import { AddButton } from '../shareStyles';
+import { ExerciseListWrapper, Exercises, Series } from './styles';
 
 const ExerciseList = ({routine, addExercise}: props): React.ReactElement => {
     const [open, setOpen] = useState(false)
@@ -15,20 +17,24 @@ const ExerciseList = ({routine, addExercise}: props): React.ReactElement => {
 
     return(
      <>
-        <div>
+     {/* componetizar */}
+        <ExerciseListWrapper>
             <h2>{routine.title}</h2>
 
             {routine.exercises.map((exercise) =>(
-                <div key={exercise.id}>
+                <Exercises key={exercise.id}>
                     <h3>{exercise.name}</h3>
+                    <Series>
+                    {Array.from({length: exercise.series}).map((_, index)=>(
+                         <SeriesButton key={index} repetitions={exercise.repetitions}/>
+                    ))}
+                    </Series>
 
-                    Series: {exercise.series}
-                    Repetitions: {exercise.repetitions}
-                </div>
+                </Exercises>
             ))}
 
            <AddButton onClick={() => setOpen(true)}>+</AddButton>
-        </div>
+        </ExerciseListWrapper>
 
         <Modal open = {open}>
             <ExerciseForm

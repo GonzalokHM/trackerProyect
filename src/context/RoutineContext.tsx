@@ -1,6 +1,6 @@
-import { createContext, useState, useEffect, useCallback} from 'react'
-import {v4 as uuidv4 } from 'uuid';
-import { Exercise, Routine } from '../types/routine'
+import { createContext, useCallback, useEffect, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import { Exercise, Routine } from '../types/routine';
 
 const initialRoutineState: Routine[] = [];
 
@@ -34,7 +34,7 @@ export const RoutineContextProvider = ({children}: {children: React.ReactNode}):
             }
             return{
                 ...routine,
-                exercises: [...routine.exercises, exercise],
+                exercises: [...routine.exercises, {...exercise, id: uuidv4() }],
             }
           }); 
          return newRoutines;

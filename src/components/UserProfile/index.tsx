@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { UserContext } from "../../context/UserContext";
-import { EditButton, UserDataRow, UserProfileWrapper } from "./styles";
+import { User } from "../../types/user";
 import Modal from "../Modal";
 import UserProfileForm from "../UserProfileForm";
-import { User } from "../../types/user";
+import { EditButton, UserDataRow, UserProfileWrapper } from "./styles";
 
 const UserProfile = (): React.ReactElement => {
   const [open, setOpen] = useState(false)

@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
-import { Form, SaveButton, CancelButton, ActionsWrapper } from './styles';
 import { Routine } from '../../types/routine';
+import { ActionsWrapper, CancelButton, Form, SaveButton } from './styles';
 const RoutineForm = ({onCancel, onSave}: Props): React.ReactElement => {
     const {handleSubmit, register} = useForm<Routine>();
 

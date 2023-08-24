@@ -1,8 +1,8 @@
+import { Route, Routes } from 'react-router-dom';
 import { AppHeader, AppMain } from './App.styles';
-import { Routes, Route } from 'react-router-dom';
-import Home from './pages/home';
-import Routine from './pages/Routine';
 import { RoutineContextProvider } from './context/RoutineContext';
+import Routine from './pages/Routine';
+import Home from './pages/home';
 
 function App() {
   return (

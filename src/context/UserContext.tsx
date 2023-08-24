@@ -1,5 +1,5 @@
-import { createContext, useState, Dispatch, SetStateAction, useEffect} from 'react'
-import { User } from '../types/user'
+import { Dispatch, SetStateAction, createContext, useEffect, useState } from 'react';
+import { User } from '../types/user';
 
 const initialUserState = {
     name: null,

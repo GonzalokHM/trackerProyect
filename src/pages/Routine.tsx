@@ -1,11 +1,7 @@
-import { useContext, useState } from "react";
-import { useParams } from "react-router-dom"
-import { RoutineContext } from "../context/RoutineContext";
-import { AddButton } from "../components/shareStyles";
-import { Exercise } from "../types/routine";
-import Modal from "../components/Modal";
-import ExerciseForm from "../components/ExerciseForm";
+import { useContext } from "react";
+import { useParams } from "react-router-dom";
 import ExerciseList from "../components/ExerciseList";
+import { RoutineContext } from "../context/RoutineContext";
 
 const Routine = (): React.ReactElement | null => {
     const {id} = useParams(); 

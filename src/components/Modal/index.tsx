@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
 import { ModalContent, ModalPopover } from './styles';
 const Modal = ({open, children} : Props) : React.ReactElement => {
     return(

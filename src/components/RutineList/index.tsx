@@ -3,8 +3,8 @@ import { RoutineContext } from '../../context/RoutineContext';
 import { Routine } from '../../types/routine';
 import Modal from "../Modal";
 import RoutineForm from '../RoutineForm';
-import { RoutineLink, RoutineListWrapper, RoutinesList } from "./styles";
 import { AddButton } from '../shareStyles';
+import { RoutineLink, RoutineListWrapper, RoutinesList } from "./styles";
 
 const RoutineList = (): React.ReactElement => {
     const [open, setOpen] = useState(false)
